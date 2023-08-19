@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import PropTypes from "prop-types";
 export const AddCategory = ({ onNewCategory }) => {
   const [value, setValue] = useState("");
   const handleChange = (e) => {
@@ -9,11 +9,11 @@ export const AddCategory = ({ onNewCategory }) => {
     e.preventDefault();
     const newValue = value.trim();
     if (newValue.length <= 1) return;
-    // setCategories((c) => [...c, value]);
+    setValue("");
     onNewCategory(newValue);
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} aria-label="form">
       <input
         type="text"
         value={value}
@@ -23,6 +23,10 @@ export const AddCategory = ({ onNewCategory }) => {
       <button>Agregar</button>
     </form>
   );
+};
+
+AddCategory.propTypes = {
+  onNewCategory: PropTypes.func.isRequired,
 };
 
 // export default AddCategory;
