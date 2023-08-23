@@ -9,6 +9,7 @@ import CallbackHook from "./06-memo/CallbackHook";
 import { MemoHook } from "./06-memo/MemoHook";
 import { Memorize } from "./06-memo/Memorize";
 import { Padre } from "./07-tarea-memo/Padre";
+import { TodoApp } from "./08-useReducer/TodoApp";
 
 const HooksApp = () => {
   return (
@@ -24,7 +25,8 @@ const HooksApp = () => {
       {/* <Memorize /> */}
       {/* <MemoHook /> */}
       {/* <CallbackHook /> */}
-      <Padre />
+      {/* <Padre /> */}
+      <TodoApp />
     </div>
   );
 };
