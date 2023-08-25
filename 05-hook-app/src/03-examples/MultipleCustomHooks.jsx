@@ -3,13 +3,11 @@ import { Character, LoadingCharacter } from "./";
 
 const url = "https://rickandmortyapi.com/api/character/";
 
-const MultipleCustomHooks = () => {
+export const MultipleCustomHooks = () => {
   const { counter, increment } = useCounter(1);
   const { data, isLoading, hasError } = useFetch(`${url}${counter}`);
-  console.log({ data, isLoading, hasError });
 
   const { name, status, image } = data ? data : {};
-  console.log(name, status);
 
   return (
     <>
@@ -32,4 +30,4 @@ const MultipleCustomHooks = () => {
   );
 };
 
-export default MultipleCustomHooks;
+// export default MultipleCustomHooks;

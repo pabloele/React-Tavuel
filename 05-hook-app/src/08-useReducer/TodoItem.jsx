@@ -11,6 +11,7 @@ const TodoItem = ({ todo, handleDeleteTodo, handleToggleTodo }) => {
           }`}
           style={{ cursor: "pointer" }}
           onClick={() => handleToggleTodo(todo)}
+          aria-label="span"
         >
           {todo.description}
         </span>
